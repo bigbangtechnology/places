@@ -5,7 +5,7 @@
   <ul data-role="listview">
     <% @interests.each do |interest| %>
     <li>
-      <%= link_to(interest.name, interest_path(interest))%>
+      <%= link_to("#{interest.name} <span class=\"ui-li-count\">#{interest.considerations_count}</span>".html_safe, interest_path(interest))%>
     </li>
     <% end %>
   </ul>

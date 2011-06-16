@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110616190806) do
+ActiveRecord::Schema.define(:version => 20110616193656) do
 
   create_table "considerations", :force => true do |t|
     t.integer  "place_id",    :null => false
@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(:version => 20110616190806) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "considerations_count", :default => 0
   end
 
+  add_index "interests", ["considerations_count"], :name => "index_interests_on_considerations_count"
   add_index "interests", ["name"], :name => "index_interests_on_name"
 
   create_table "places", :force => true do |t|
