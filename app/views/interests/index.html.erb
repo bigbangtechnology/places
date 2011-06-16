@@ -1,6 +1,10 @@
-<h1>Interests</h1>
-<p>
-  <% @interests.each do |interest| %>
-    <%= interest.name %><br />
-  <% end %>
-</p>
+<div data-role="header">
+  <h1>Interests</h1>
+</div>
+<div data-role="content">
+  <ul data-role="listview">
+    <% @interests.each do |interest| %>
+    <li><%= interest.name %></li>
+    <% end %>
+  </ul>
+</div>
