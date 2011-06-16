@@ -1,11 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.8'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2', '~> 0.2.6'
+
+gem 'jquery-rails'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
