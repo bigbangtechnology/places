@@ -1,0 +1,10 @@
+<div data-role="header">
+  <h1><%= @interest.name %></h1>
+</div>
+<div data-role="content">
+  <ul data-role="listview">
+    <% @interest.places.each do |place| %>
+    <li><%= place.name %></li>
+    <% end %>
+  </ul>
+</div>
