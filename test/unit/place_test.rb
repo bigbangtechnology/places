@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class PlaceTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should have_many(:considerations)
+  should have_many(:interests).through(:considerations)
+  should have_many(:locations)
 end

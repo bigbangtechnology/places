@@ -16,4 +16,14 @@ gem 'geokit-rails3'
 # and rake tasks are available in development mode:
 # group :development, :test do
 #   gem 'webrat'
+#   gem 'autotest-rails', '4.1.0'
+#   gem 'factory_girl_rails', '1.0'
+#   gem 'mocha', '0.9.8'
+#   gem 'timecop', '0.3.5'
+#   gem 'shoulda', '2.11.3'
+#   gem 'ZenTest', '4.5.0'
 # end
+
+group :development, :test do
+  gem 'shoulda', '2.11.3'
+end
