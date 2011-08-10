@@ -25,5 +25,7 @@ gem 'geokit-rails3'
 # end
 
 group :development, :test do
+  gem 'mocha', '0.9.8'
   gem 'shoulda', '2.11.3'
+  gem 'factory_girl_rails', '1.0'
 end
