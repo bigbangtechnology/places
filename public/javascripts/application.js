@@ -9,9 +9,17 @@ $(navigator).ready(function() {
 });
 
 function geo_success(position) {
-  $.ajax({
-    type: "POST",
-    url:  "/geolocation",
-    data: position
-  });
+  var current_lat = position.coords.latitude;
+  var current_lng = position.coords.longitude;  
+  
+  var cached_lat  = $("meta[name|=cached-geo-latitude]").attr("content");
+  var cached_lng  = $("meta[name|=cached-geo-longitude]").attr("content");
+  
+  if ((current_lat != cached_lat) || (current_lng != cached_lng)) {
+    $.ajax({
+      type: "POST",
+      url:  "/geolocation",
+      data: position
+    }); 
+  }
 }
