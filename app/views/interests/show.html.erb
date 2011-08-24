@@ -3,8 +3,13 @@
 </div>
 <div data-role="content">
   <ul data-role="listview">
-    <% @interest.places.each do |place| %>
-    <li><%= place.name %></li>
+    <% @locations.each do |location| %>
+    <li>
+      <%= location.place.name %>
+      <br />
+      <span class="byline"><%= location.address %></span>
+      <span class="ui-li-count"><%= location.distance.round(1) %> kms</span>
+    </li>
     <% end %>
   </ul>
 </div>

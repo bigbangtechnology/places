@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class InterestTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should have_many(:considerations)
+  should have_many(:places).through(:considerations)
 end
