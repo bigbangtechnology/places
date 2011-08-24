@@ -12,6 +12,10 @@ class Geolocation
     @longitude ||= @params[:coords][:longitude].to_f
   end
   
+  def to_s
+    "#{latitude}, #{longitude}"
+  end
+  
   private
   
   def symbolize_keys(params)
