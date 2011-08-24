@@ -19,5 +19,36 @@ class InterestsControllerTest < ActionController::TestCase
     
     should respond_with :success
   end
+  
+  context "when requesting with a location string" do
+    setup do
+      get :index
+    end
+    
+    should respond_with :success
+    should assign_to(:location).with_kind_of(String)
+  end
+  
+  context "when requesting with a location session already set" do
+    setup do
+      session[:geolocation] = Geolocation.new(stub_geolocation_params)
+      
+      get :index
+    end
+    
+    should respond_with :success
+    
+    # TODO: Geokit 1.6.0 will check for method to_lat_lng, so kind can be Geolocation
+    should assign_to(:location).with_kind_of(String)
+  end
+  
+  context "when requesting without a location" do
+    setup do
+      get :index
+    end
+    
+    should respond_with :success
+    should assign_to(:location).with_kind_of(String)
+  end
 
 end

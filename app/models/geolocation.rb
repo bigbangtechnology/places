@@ -5,15 +5,15 @@ class Geolocation
   end
   
   def latitude
-    @latitude ||= @params[:coords][:latitude].to_f
+    @latitude ||= (@params[:coords][:latitude].to_f || 0)
   end
   
   def longitude
-    @longitude ||= @params[:coords][:longitude].to_f
+    @longitude ||= (@params[:coords][:longitude].to_f || 0)
   end
   
-  def to_s
-    "#{latitude}, #{longitude}"
+  def to_lat_lng
+    [latitude, longitude].join(", ")
   end
   
   private

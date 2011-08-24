@@ -14,11 +14,11 @@ class GeolocationTest < ActiveSupport::TestCase
     
     should "have a formatted latitude and longitude when asked for a string" do
       lat_lng = [
-        stub_geolocation_params["coords"]["latitude"].to_f,
-        stub_geolocation_params["coords"]["longitude"].to_f
+        stub_geolocation_params["coords"]["latitude"],
+        stub_geolocation_params["coords"]["longitude"]
       ].join(", ")
       
-      assert_equal lat_lng.to_s, @geolocation.to_s
+      assert_equal lat_lng, @geolocation.to_lat_lng
     end
   end
   
