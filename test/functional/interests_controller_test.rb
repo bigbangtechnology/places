@@ -26,7 +26,7 @@ class InterestsControllerTest < ActionController::TestCase
     end
     
     should respond_with :success
-    should assign_to(:location).with_kind_of(String)
+    should assign_to(:determined_location).with_kind_of(String)
   end
   
   context "when requesting with a location session already set" do
@@ -39,7 +39,7 @@ class InterestsControllerTest < ActionController::TestCase
     should respond_with :success
     
     # TODO: Geokit 1.6.0 will check for method to_lat_lng, so kind can be Geolocation
-    should assign_to(:location).with_kind_of(String)
+    should assign_to(:determined_location).with_kind_of(String)
   end
   
   context "when requesting without a location" do
@@ -48,7 +48,7 @@ class InterestsControllerTest < ActionController::TestCase
     end
     
     should respond_with :success
-    should assign_to(:location).with_kind_of(String)
+    should assign_to(:determined_location).with_kind_of(String)
   end
 
 end

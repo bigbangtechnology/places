@@ -5,9 +5,7 @@
   <ul data-role="listview">
     <% @locations.each do |location| %>
     <li>
-      <%= location.place.name %>
-      <br />
-      <span class="byline"><%= location.address %></span>
+      <%= link_to("#{location.place.name}<br /><span class=\"byline\">#{location.address}</span>".html_safe, location_path(location))%>
       <span class="ui-li-count"><%= location.distance.round(1) %> kms</span>
     </li>
     <% end %>

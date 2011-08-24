@@ -10,6 +10,6 @@ class InterestsController < ApplicationController
     @interest = Interest.find(params[:id])
 
     @locations = Location.joins(:place => [:interests]).where(["interests.id = ?", @interest.id]).all
-    @locations.sort_by_distance_from(@location)
+    @locations.sort_by_distance_from(@determined_location)
   end
 end
