@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Places</title>
-  <meta name="cached-geo-latitude" content="<%= @current_location.try(:latitude) || 0.0 %>" />
-  <meta name="cached-geo-longitude" content="<%= @current_location.try(:longitude) || 0.0 %>" />
+  <meta name="cached-geo-latitude" content="<%= @current_location.latitude || 0.0 %>" />
+  <meta name="cached-geo-longitude" content="<%= @current_location.longitude || 0.0 %>" />
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag "http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" %>
   <%= stylesheet_link_tag "application" %>
