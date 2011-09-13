@@ -1,0 +1,12 @@
+<div data-role="page" class="locationShow" id="location<%= location.id %>" data-lat="<%= location.lat %>" data-lng="<%= location.lng %>">
+  <div data-role="header">
+    <h1><%= location.place.name %></h1>
+  </div>
+  <div data-role="content">
+    <div class="map_canvas"></div>
+    <div class="location_details">
+      <h1><%= location.place.name %></h1>
+      <p><%= location.address %></p>
+    </div>
+  </div>
+</div>

@@ -2,3 +2,25 @@
 	font-size: 12px;
 	font-weight: normal;
 }
+
+.map_canvas {
+  float: left;
+  margin-right: 1%;
+	width: 75%;
+	height: 500px;
+}
+.location_details {
+  background: #fff;
+  float: left;
+  width: 24%;
+  height: 500px;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 10px;
+}
+p {
+  line-height: 24px;
+  padding: 10px;
+}

@@ -1,13 +1,15 @@
-<div data-role="header">
-  <h1><%= @interest.name %></h1>
-</div>
-<div data-role="content">
-  <ul data-role="listview">
-    <% @locations.each do |location| %>
-    <li>
-      <%= link_to("#{location.place.name}<br /><span class=\"byline\">#{location.address}</span>".html_safe, location_path(location))%>
-      <span class="ui-li-count"><%= location.distance.round(1) %> kms</span>
-    </li>
-    <% end %>
-  </ul>
+<div data-role="page">
+  <div data-role="header">
+    <h1><%= @interest.name %></h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @locations.each do |location| %>
+      <li>
+        <%= link_to("#{location.place.name}<br /><span class=\"byline\">#{location.address}</span>".html_safe, location_path(location))%>
+        <span class="ui-li-count"><%= location.distance.round(1) %> kms</span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
